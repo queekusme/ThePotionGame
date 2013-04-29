@@ -3,7 +3,5 @@ import me.queekus.TissueParticle.*;
 
 public class GameObject extends StatableItem{
 
-	public GameObject(){
-		
-	}
+	public GameObject(){}
 }
