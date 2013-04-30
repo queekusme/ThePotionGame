@@ -9,16 +9,10 @@ public class ThePotionGame{
 		Version version = new Version(0, 0, 0, 1, DevStates.Pre_Alpha);		
 		PotGameWindow gui = new PotGameWindow("Tombs " + version.toString(), 800, 600);
 		
-		Cauldron Cauldron = new Cauldron();
-		
-		// Potion Item Declaration Here
-		GameObject flyWings = new GameObject();
-			flyWings.setStatValue("Health", 10);
-		GameObject timeWait10 = new GameObject();
-			timeWait10.setStatValue("Wait", 10);
+		Cauldron Cauldron = new Cauldron();		
 		
 		// Cauldron Recipes Added Here
-		Cauldron.addRecipe(new CauldronRecipe(new GameObject[]{ flyWings, timeWait10, flyWings }));
+		Cauldron.addRecipe(new CauldronRecipe(new GameObject[]{ GameObject.flyWings, GameObject.temperature100, GameObject.flyWings }));
 		
 	}
 	
