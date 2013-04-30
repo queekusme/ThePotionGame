@@ -4,15 +4,18 @@ import me.queekus.programs.ThePotionGame.Objects.*;
 import me.queekus.programs.ThePotionGame.api.*;
 
 public class ThePotionGame{
-
+	public static Version version = new Version(0, 0, 0, 3, DevStates.Pre_Alpha);	
+	public static Cauldron Cauldron = new Cauldron();		
 	public static void main(String[] args){
-		Version version = new Version(0, 0, 0, 2, DevStates.Pre_Alpha);		
-		PotGameWindow gui = new PotGameWindow("Tombs " + version.toString(), 800, 600);
-		
-		Cauldron Cauldron = new Cauldron();		
-		
+		PotGameWindow gui = new PotGameWindow("The Potion Game " + version.toString(), 800, 600);
+			
 		// Cauldron Recipes Added Here
-		Cauldron.addRecipe(new CauldronRecipe(new GameObject[]{ GameObject.flyWings, GameObject.temperature100, GameObject.flyWings }));
+		Cauldron.addRecipe(new CauldronRecipe(new GameObject[]{ GameObject.flyWings, GameObject.flyWings }).associatePotion(GameObject.healthPotion));
+		
+		GameLogic game = new GameLogic();
+		game.Load();
+		game.Draw();
+		game.Update();
 		
 	}
 	
