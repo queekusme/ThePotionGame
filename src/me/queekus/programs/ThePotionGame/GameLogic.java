@@ -14,39 +14,11 @@ public class GameLogic {
 	}
 	public void Update(){
 		
-	try{
-		    BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
-		    String s = bufferRead.readLine();
-		    
-		    String[] args = s.split(" ");
-		    
-		    switch(args[0]){
-		    	case "add":
-		    		switch(args[1]){
-			    	case "wings":
-			    		if (ThePotionGame.Cauldron.addToCauldron(GameObject.flyWings)){
-			    		}
-			    		break;
-		    		}
-		    		break;
-		    	case "bottle":
-			    	Potion result = ThePotionGame.Cauldron.bottlePotion();
-				    System.out.println("\nPotion Successful,\nPotion Name = " + result.name + "\nEffect = " + result.statValue + " " + result.statType);
-		    		break;
-		    }
-		    
-		    
-		}
-		catch(IOException e)
-		{
-			e.printStackTrace();
-		}
-		
 		Draw();
 	}
 	public void Draw(){
 		//Do Draw Methods Here
-		Update();
+		//Update();
 	}
 	
 }

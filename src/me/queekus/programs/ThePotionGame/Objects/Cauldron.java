@@ -1,8 +1,8 @@
 package me.queekus.programs.ThePotionGame.Objects;
-import me.queekus.TissueParticle.*;
+import me.queekus.programs.ThePotionGame.*;
 import me.queekus.programs.ThePotionGame.api.*;
 
-public class Cauldron extends StatableItem{
+public class Cauldron {
 
 	public CauldronRecipe[] recipeList = new CauldronRecipe[999];
 	public GameObject[] addedItems = new GameObject[999];
@@ -54,10 +54,10 @@ public class Cauldron extends StatableItem{
 			GameObject[] rep = recipeList[r].recipe;
 			for(int x = 0; x < rep.length; x++){
 				recipeStats[x] = recipeList[r].recipe[x];
-				System.out.println("StatType: " + recipeStats[x].statType);
-				System.out.println("StatValue: " + recipeStats[x].statValue);
-				System.out.println("AddedItem StatType: " + addedItems[x].statType);
-				System.out.println("AddedItem StatValue: " + addedItems[x].statValue);
+				//ThePotionGame.gui.write("StatType: " + recipeStats[x].statType);
+				//ThePotionGame.gui.write("StatValue: " + recipeStats[x].statValue);
+				//ThePotionGame.gui.write("AddedItem StatType: " + addedItems[x].statType);
+				//ThePotionGame.gui.write("AddedItem StatValue: " + addedItems[x].statValue);
 			}
 			for (int z = 0; z < recipeStats.length; z++){
 				numofstats++;
