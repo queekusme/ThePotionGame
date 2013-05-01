@@ -31,7 +31,7 @@ public class GameLogic {
 		    		break;
 		    	case "bottle":
 			    	Potion result = ThePotionGame.Cauldron.bottlePotion();
-				    System.out.println(result.statValue);
+				    System.out.println("\nPotion Successful,\nPotion Name = " + result.name + "\nEffect = " + result.statValue + " " + result.statType);
 		    		break;
 		    }
 		    
