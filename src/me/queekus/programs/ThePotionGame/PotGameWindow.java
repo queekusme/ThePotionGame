@@ -23,7 +23,7 @@ public class PotGameWindow  extends JFrame implements KeyListener{
 		
 		Output.setLineWrap(true);
 		Output.setWrapStyleWord(true);
-		Output.append("Click on the box below, enter your text and press CTRL to submit the command");
+		Output.append("Click on the box below, enter your text and press ENTER to submit the command");
 		
 		Input.addKeyListener(this);
 		
