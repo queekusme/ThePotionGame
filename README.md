@@ -3,7 +3,7 @@ THE POTION GAME:
 
 <dl>
   <dt>Minimum System Requirements:</dt>
-  <dd>Java 1.6 (Still not actually tested, though works on java 1.7)</dd>
+  <dd>Java 1.6 (Theoretically should work, though if not, update to java 1.7, which does work)</dd>
 </dl>
 
 <dl>
