@@ -28,7 +28,6 @@ THE POTION GAME:
 <dl>
   <dt>Implemented recipes:</dt>
   <dd>{Wings, Wings} = Potion of 20 Health</dd>
-  <dd>Wait</dd>
 </dl>
 
 How To Use
