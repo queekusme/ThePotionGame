@@ -49,12 +49,12 @@ Custon effects depending on ingredient combinations:
     type 'add flowers' to add flowers to the current potion
     type bottle to create the potion, this should produce a potion of 10 Fortune This is an example of 2 ingredients together producing a different effect just because they have been combined
 
-Multiple Effects on one potion:
+Combining Effects:
 
     type 'add flowers' to add flowers to the current potion
     type 'add flowers' to add flowers to the current potion again
     type bottle to create the potion, this should produce a potion of 10 Luck, 10 Luck
-    (Currently combining effects such as this is not implemented), This is an example of multiple effects on one potion
+    (This is combined into 20 Luck), This is an example of multiple effects on one potion
 
 Multiple Effects:
 
