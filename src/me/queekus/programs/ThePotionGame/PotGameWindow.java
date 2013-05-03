@@ -1,8 +1,8 @@
 package me.queekus.programs.ThePotionGame;
 import javax.swing.*;
 
-import me.queekus.programs.ThePotionGame.Objects.GameObject;
-import me.queekus.programs.ThePotionGame.Objects.Potion;
+import me.queekus.programs.ThePotionGame.Objects.*;
+import me.queekus.programs.ThePotionGame.api.CauldronRecipe;
 
 import java.awt.event.*;
 
@@ -45,11 +45,39 @@ public class PotGameWindow  extends JFrame implements KeyListener{
 		    		if (args[1].equals("wings")){
 			    		ThePotionGame.gui.write("add wings");
 			    		ThePotionGame.Cauldron.addToCauldron(GameObject.flyWings);
+		    		}else if (args[1].equals("flowers")){
+			    		ThePotionGame.gui.write("add flowers");
+			    		ThePotionGame.Cauldron.addToCauldron(GameObject.flowers);
 		    		}
 			    }else if (args[0].equals("bottle")){
 		    		ThePotionGame.gui.write("bottle");
 			    	Potion result = ThePotionGame.Cauldron.bottlePotion();
-				    ThePotionGame.gui.write("Potion Successful,\nPotion Name = " + result.name + "\nEffect = " + result.statValue + " " + result.statType);
+			    	int numofaddstats = 0;
+			    	if (result.stats != null){
+			    		numofaddstats = result.stats.length;
+					}
+			    	System.out.print(numofaddstats);
+			    	if (numofaddstats > 0){
+			    		ThePotionGame.gui.write("Misc Potion,\nPotion Name = " + result.name);
+			    		for (GameObject addedItem: result.stats){
+			    			if (addedItem.statType != null){
+				    			ThePotionGame.gui.write("Effect:" + addedItem.statValue + " " + addedItem.statType);
+							}
+			    			//System.out.print("Effect:" + addedItem.statValue + " " + addedItem.statType + "\n");
+			    		}
+			    	}
+			    	else{
+			    		ThePotionGame.gui.write("Potion Successful,\nPotion Name = " + result.name + "\nEffect = " + result.statValue + " " + result.statType);
+			    	}
+			    	
+					CauldronRecipe[] recipes = new CauldronRecipe[999];
+					recipes = ThePotionGame.Cauldron.recipeList;
+					ThePotionGame.Cauldron = new Cauldron();
+					
+					for (int rep = 0; rep < recipes.length; rep++){
+						ThePotionGame.Cauldron.addRecipe(recipes[rep]);
+					}
+			    	
 	    		}else {
 	    			
 	    		}
