@@ -62,10 +62,9 @@ public class PotGameWindow  extends JFrame implements KeyListener{
 			    		for (GameObject addedItem: result.stats){
 			    			if (addedItem != null){
 			    				if (addedItem.statType != null){
-					    			ThePotionGame.gui.write("Effect:" + addedItem.statValue + " " + addedItem.statType);
+					    			ThePotionGame.gui.write("Effect: " + addedItem.statValue + " " + addedItem.statType);
 								}
 							}
-			    			//System.out.print("Effect:" + addedItem.statValue + " " + addedItem.statType + "\n");
 			    		}
 			    	}
 			    	else{
@@ -80,27 +79,7 @@ public class PotGameWindow  extends JFrame implements KeyListener{
 						ThePotionGame.Cauldron.addRecipe(recipes[rep]);
 					}
 			    	
-	    		}else {
-	    			
-	    		}
-			    //switch(args[0]){
-			    //	case "add":
-			    //		switch(args[1]){
-			    //    	case "wings":
-			    //    		ThePotionGame.gui.write("add wings");
-			    //    		if (ThePotionGame.Cauldron.addToCauldron(GameObject.flyWings)){
-			    //    		}
-			    //    		break;
-			    //		}
-			    //		break;
-			    //	case "bottle":
-			    //		ThePotionGame.gui.write("bottle");
-			    //   	Potion result = ThePotionGame.Cauldron.bottlePotion();
-			    //	    ThePotionGame.gui.write("Potion Successful,\nPotion Name = " + result.name + "\nEffect = " + result.statValue + " " + result.statType);
-			    //		break;
-			    //}
-			    
-			    
+	    		} 
 			}
 			finally{
 				ThePotionGame.gui.Input.setText("");
