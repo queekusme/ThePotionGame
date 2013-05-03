@@ -60,8 +60,10 @@ public class PotGameWindow  extends JFrame implements KeyListener{
 			    	if (numofaddstats > 0){
 			    		ThePotionGame.gui.write("Misc Potion,\nPotion Name = " + result.name);
 			    		for (GameObject addedItem: result.stats){
-			    			if (addedItem.statType != null){
-				    			ThePotionGame.gui.write("Effect:" + addedItem.statValue + " " + addedItem.statType);
+			    			if (addedItem != null){
+			    				if (addedItem.statType != null){
+					    			ThePotionGame.gui.write("Effect:" + addedItem.statValue + " " + addedItem.statType);
+								}
 							}
 			    			//System.out.print("Effect:" + addedItem.statValue + " " + addedItem.statType + "\n");
 			    		}

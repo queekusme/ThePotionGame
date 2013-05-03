@@ -41,6 +41,7 @@ public class Cauldron {
 		int correct;
 		int maxnums;
 		boolean match = false;
+		CauldronRecipe matchedrecipe = null;
 		//check if is a set recipe, match means that it is a set recipe
 		for(CauldronRecipe recipes : recipeList){// Foreach recipe
 			correct = 0;
@@ -70,12 +71,19 @@ public class Cauldron {
 				}
 			}
 		}
-		return null;
 		
 		// if not then
 		// check for certain ingrediant combinations to apply different effect
-		//return effects list
-		
+		int flywings = this.contains(GameObject.flyWings);
+		int flowers = this.contains(GameObject.flyWings);
+		if ( flywings != -1 && flowers != -1 ){
+			addedItems[flywings] = new GameObject(StatType.Luck, 10);
+			addedItems[flowers] = null;
+		}
+		// return effects list
+		Potion newPotion = new Potion(null, 0, "Custom Potion");
+		newPotion.setStats(addedItems);
+		return newPotion;
 		
 		//Check Items In Potion And Give Result Acording To a) Recipe or b) randomness
 		//GameObject[] recipeStats = new GameObject[999];
@@ -138,5 +146,13 @@ public class Cauldron {
 		//	addedItems[aI] = new GameObject(null, -1);
 		//}
 		//return new Potion(null, -1, "Flat Potion");
+	}
+	public int contains(Object obj){
+		for (int y = 0; y < addedItems.length; y++){
+			if (addedItems[y].equals(obj)){
+				return y;
+			}
+		}
+		return -1;
 	}
 }
