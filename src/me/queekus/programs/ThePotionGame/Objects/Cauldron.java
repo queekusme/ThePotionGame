@@ -39,8 +39,6 @@ public class Cauldron {
 		int correct;
 		int maxnums;
 		boolean match = false;
-		CauldronRecipe matchedrecipe = null;
-		
 		//check if is a set recipe, match means that it is a set recipe
 		for(CauldronRecipe recipes : recipeList){
 			correct = 0;
@@ -76,9 +74,62 @@ public class Cauldron {
 		checkForSpecialCombinations(this.contains(GameObject.flyWings), this.contains(GameObject.flowers), GameObject.money);
 		checkForSpecialCombinations(this.contains(GameObject.money), this.contains(GameObject.flowers), GameObject.heart);
 		
+		//Combine all like effects
+		int Health = 0;
+		int Luck = 0;
+		int Fortune = 0;
+		int Love = 0;
+		int Heat = 0;
+		int Wait = 0;
+		for (GameObject effect : addedItems){
+			if (effect != null){
+				if (effect.statType != null){
+					switch(effect.statType){
+						case Health:
+							Health += effect.statValue;
+							break;
+						case Luck:
+							Luck += effect.statValue;
+							break;
+						case Fortune:
+							Fortune += effect.statValue;
+							break;
+						case Love:
+							Love += effect.statValue;
+							break;
+						case Heat:
+							Heat += effect.statValue;
+							break;
+						case Wait:
+							Wait += effect.statValue;
+							break;	
+					}
+				}
+			}
+		}
+		GameObject[] outputItems = new GameObject[6];
+		if (Health > 0){
+			outputItems[0] = new GameObject(StatType.Health, Health);
+		}
+		if (Luck > 0){
+			outputItems[1] = new GameObject(StatType.Luck, Luck);	
+		}
+		if (Fortune > 0){
+			outputItems[2] = new GameObject(StatType.Fortune, Fortune);
+		}
+		if (Love > 0){
+			outputItems[3] = new GameObject(StatType.Love, Love);
+		}
+		if (Heat > 0){
+			outputItems[4] = new GameObject(StatType.Heat, Heat);
+		}
+		if (Wait > 0){
+			outputItems[5] = new GameObject(StatType.Wait, Wait);	
+		}
+		
 		// return effects list
 		Potion newPotion = new Potion(null, 0, "Custom Potion");
-		newPotion.setStats(addedItems);
+		newPotion.setStats(outputItems);
 		return newPotion;
 	}
 
