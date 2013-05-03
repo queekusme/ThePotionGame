@@ -73,7 +73,8 @@ public class Cauldron {
 		
 		// if not then
 		// check for certain ingrediant combinations to apply different effect
-		checkForSpecialCombinations(this.contains(GameObject.flyWings), this.contains(GameObject.flowers), StatType.Fortune, 10);
+		checkForSpecialCombinations(this.contains(GameObject.flyWings), this.contains(GameObject.flowers), GameObject.money);
+		checkForSpecialCombinations(this.contains(GameObject.money), this.contains(GameObject.flowers), GameObject.heart);
 		
 		// return effects list
 		Potion newPotion = new Potion(null, 0, "Custom Potion");
@@ -81,17 +82,19 @@ public class Cauldron {
 		return newPotion;
 	}
 
-	private void checkForSpecialCombinations(int refOne, int refTwo, StatType replacingType, int ReplacingValue) {
+	private void checkForSpecialCombinations(int refOne, int refTwo, GameObject replacing) {
 
 		if ( refOne != -1 && refTwo != -1 ){
-			addedItems[refOne] = new GameObject( replacingType, ReplacingValue );
+			addedItems[refOne] = replacing;
 			addedItems[refTwo] = null;
 		}
 	}
 	public int contains(Object obj){
 		for (int y = 0; y < addedItems.length; y++){
-			if (addedItems[y].equals(obj)){
-				return y;
+			if (addedItems[y] != null){
+				if (addedItems[y].equals(obj)){
+					return y;
+				}
 			}
 		}
 		return -1;

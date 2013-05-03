@@ -17,6 +17,7 @@ THE POTION GAME:
   <dd>Health</dd>
   <dd>Luck</dd>
   <dd>Fortune</dd>
+  <dd>Love</dd>
 </dl>
 
 <dl>
@@ -59,6 +60,16 @@ Multiple Effects:
 
     Many different effects can be combined for example try this potion:
     add wings
-    add flowers
     add wings
+    add flowers
     bottle
+	
+	or
+	
+	add wings
+    add wings
+    add flowers
+    add flowers
+    add flowers
+    add flowers
+	
