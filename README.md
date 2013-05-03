@@ -1,7 +1,7 @@
 THE POTION GAME:
 ================
 
-Requires Java 1.7 to run
+No longer requires Java 1.7 to run, should work down to java 1.6 now
 
 This is a work in progress java game currently in pre-alpha stage.
 
