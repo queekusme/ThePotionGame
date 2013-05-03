@@ -36,18 +36,22 @@ How To Use
     after loading the game up you will see a window which is a large box and a smaller box,
     The smaller box is the input and the larger box is the output.
 
+
     type 'add wings' to add wings to the current potion
     type 'add wings' to add wings to the current potion again
     type bottle to create the potion, this should produce a potion of 20 health, this is an example of a set recipe.
+
 
     type 'add wings' to add wings to the current potion
     type 'add flowers' to add flowers to the current potion
     type bottle to create the potion, this should produce a potion of 10 Fortune This is an example of 2 ingredients together producing a different effect just because they have been combined
 
+
     type 'add flowers' to add flowers to the current potion
     type 'add flowers' to add flowers to the current potion again
     type bottle to create the potion, this should produce a potion of 10 Luck, 10 Luck
     (Currently combining effects such as this is not implemented), This is an example of multiple effects on one potion
+
 
     Many different effects can be combined for example try this potion:
     add wings
