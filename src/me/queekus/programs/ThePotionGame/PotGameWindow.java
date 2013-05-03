@@ -38,27 +38,37 @@ public class PotGameWindow  extends JFrame implements KeyListener{
 	public void keyPressed(KeyEvent event) {
 		if (event.getKeyCode() == KeyEvent.VK_ENTER){
 			try{
-			    //BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
-			    String s = ThePotionGame.gui.Input.getText();//bufferRead.readLine();
-			    
+			    String s = ThePotionGame.gui.Input.getText();
 			    String[] args = s.split(" ");
 			    
-			    switch(args[0]){
-			    	case "add":
-			    		switch(args[1]){
-				    	case "wings":
-				    		ThePotionGame.gui.write("add wings");
-				    		if (ThePotionGame.Cauldron.addToCauldron(GameObject.flyWings)){
-				    		}
-				    		break;
-			    		}
-			    		break;
-			    	case "bottle":
-			    		ThePotionGame.gui.write("bottle");
-				    	Potion result = ThePotionGame.Cauldron.bottlePotion();
-					    ThePotionGame.gui.write("Potion Successful,\nPotion Name = " + result.name + "\nEffect = " + result.statValue + " " + result.statType);
-			    		break;
-			    }
+			    if(args[0].equals("add")){
+		    		if (args[1].equals("wings")){
+			    		ThePotionGame.gui.write("add wings");
+			    		ThePotionGame.Cauldron.addToCauldron(GameObject.flyWings);
+		    		}
+			    }else if (args[0].equals("bottle")){
+		    		ThePotionGame.gui.write("bottle");
+			    	Potion result = ThePotionGame.Cauldron.bottlePotion();
+				    ThePotionGame.gui.write("Potion Successful,\nPotion Name = " + result.name + "\nEffect = " + result.statValue + " " + result.statType);
+	    		}else {
+	    			
+	    		}
+			    //switch(args[0]){
+			    //	case "add":
+			    //		switch(args[1]){
+			    //    	case "wings":
+			    //    		ThePotionGame.gui.write("add wings");
+			    //    		if (ThePotionGame.Cauldron.addToCauldron(GameObject.flyWings)){
+			    //    		}
+			    //    		break;
+			    //		}
+			    //		break;
+			    //	case "bottle":
+			    //		ThePotionGame.gui.write("bottle");
+			    //   	Potion result = ThePotionGame.Cauldron.bottlePotion();
+			    //	    ThePotionGame.gui.write("Potion Successful,\nPotion Name = " + result.name + "\nEffect = " + result.statValue + " " + result.statType);
+			    //		break;
+			    //}
 			    
 			    
 			}
