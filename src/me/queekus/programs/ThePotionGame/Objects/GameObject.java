@@ -8,7 +8,9 @@ public class GameObject {
 	public static GameObject money = new GameObject(StatType.Fortune, 10);
 	public static GameObject timeWait10 = new GameObject(StatType.Wait, 10);
 	public static GameObject temperature100 = new GameObject(StatType.Heat, 100);
+	public static GameObject plagueSample = new GameObject(StatType.Sample, 100);
 	public static GameObject healthPotion = new Potion(StatType.Health, 20, "Health Potion");
+	public static GameObject plagueCure = new Potion(StatType.Cure, 100, "Plague Cure");
 	
 	public StatType statType;
 	public int statValue = 0;

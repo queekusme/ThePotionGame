@@ -4,7 +4,7 @@ import me.queekus.programs.ThePotionGame.Objects.*;
 import me.queekus.programs.ThePotionGame.api.*;
 
 public class ThePotionGame{
-	public static Version version = new Version(0, 0, 0, 10, DevStates.Pre_Alpha);	
+	public static Version version = new Version(0, 0, 0, 11, DevStates.Pre_Alpha);	
 	public static Cauldron Cauldron = new Cauldron();
 	public static PotGameWindow gui;
 	public static void main(String[] args){
@@ -12,7 +12,8 @@ public class ThePotionGame{
 			
 		// Cauldron Recipes Added Here
 		Cauldron.addRecipe(CauldronRecipe.healthPotRecipe);
-		
+		Cauldron.addRecipe(CauldronRecipe.PlagueCureRecipe);
+				
 		//GameLogic game = new GameLogic();
 		//game.Load();
 		//game.Draw();

@@ -62,7 +62,6 @@ public class Cauldron {
 						}
 					}
 					if (match == true) {
-						System.out.print("MATCH");
 						return recipes.potion;
 					}
 				}

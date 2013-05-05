@@ -48,6 +48,12 @@ public class PotGameWindow  extends JFrame implements KeyListener{
 		    		}else if (args[1].equals("flowers")){
 			    		ThePotionGame.gui.write("add flowers");
 			    		ThePotionGame.Cauldron.addToCauldron(GameObject.flowers);
+		    		}else if (args[1].equals("plague")){
+			    		ThePotionGame.gui.write("add plague");
+			    		ThePotionGame.Cauldron.addToCauldron(GameObject.plagueSample);
+		    		}else if (args[1].equals("heat100")){
+			    		ThePotionGame.gui.write("add heat100");
+			    		ThePotionGame.Cauldron.addToCauldron(GameObject.temperature100);
 		    		}
 			    }else if (args[0].equals("bottle")){
 		    		ThePotionGame.gui.write("bottle");

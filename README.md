@@ -8,28 +8,31 @@ THE POTION GAME:
 </dl>
 
 <dl>
-  <dt>Current ingredients avaliable:</dt>
+  <dt>Current 'ingredients' avaliable:</dt>
   <dd>wings</dd>
   <dd>flowers</dd>
+  <dd>plague</dd>
+  <dd>heat100</dd>
 </dl>
 
 <dl>
-  <dt>Implemented, usable effects:</dt>
+  <dt>Implemented effects:</dt>
   <dd>Health</dd>
   <dd>Luck</dd>
   <dd>Fortune</dd>
   <dd>Love</dd>
+  <dd>Heat(partly implemented)</dd>
 </dl>
 
 <dl>
   <dt>Implemented, un-usable effects:</dt>
-  <dd>Heat</dd>
   <dd>Wait</dd>
 </dl>
 
 <dl>
   <dt>Implemented recipes:</dt>
-  <dd>{Wings, Wings} = Potion of 20 Health</dd>
+  <dd>{wings, wings} = Potion of 20 Health</dd>
+  <dd>{plague, heat100, wings} = Potion of 100 Cure(Plague)</dd>
 </dl>
 
 How To Use
