@@ -20,6 +20,7 @@ public class PotGameWindow  extends JFrame implements KeyListener{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		add(pnl);
 		setVisible(true);
+		setResizable(false);
 		
 		Output.setLineWrap(true);
 		Output.setWrapStyleWord(true);
