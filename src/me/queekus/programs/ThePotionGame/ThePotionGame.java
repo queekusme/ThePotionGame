@@ -50,11 +50,6 @@ public class ThePotionGame{
 		// Cauldron Recipes Added Here
 		Cauldron.addRecipe(CauldronRecipe.healthPotRecipe);
 		Cauldron.addRecipe(CauldronRecipe.PlagueCureRecipe);
-				
-		//GameLogic game = new GameLogic();
-		//game.Load();
-		//game.Draw();
-		//game.Update();
 		
 	}
 	
